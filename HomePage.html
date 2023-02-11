@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link a href="HomePage.css" type="text/css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.css'>
+    <title>HomePage - StockChart</title>
+</head>
+<body>
+
+    <div class = "cabecalho" id="cabecalho">
+        <h1 id ="titulo" onclick="window.location.reload()">Stock Chart</h1>
+        
+        <ul id="ulcabecalho">
+            <li style="text-decoration: overline black 3px;">Search</li>
+            <li id="profileButton">Profile</li>
+            <!--<li><a href="../Wallet/wallet.html">My Wallet</a></li>
+            <li>My WatchList</li>
+            <li>My News</li>-->
+        </ul>
+        <span id="InformationMessage"><br/><span style="color:brown; font-weight: 900">Sample project</span> by Simão Bonvalot. Search and analyze your favourite stocks.</span>
+    </div>
+
+    <div id="userProfile">
+        <h1><u>My Profile</u></h1>
+        <div id="userImage"><img src="./images/profile_pic.png" style="object-fit: cover; border-radius: 50%;"></div>
+        <h2 style ="text-align: center;" id="userIDprofile"><u>Username</u></h2>
+        <ul></ul>
+            <li class="profileList">O meu perfil</li>
+            <li class="profileList">Statistics</li>
+            <li class="profileList">Definições</li>
+            <li class="profileList">Logout</li>
+        </ul>
+        <div>
+        <button id ="closeUserProfile" style="transform: translateX(500%);">Close</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form id="SearchForm">
+        <label for="searchbar"></label><br>
+        <input type="search" name="searchbar" id="searchbar" placeholder="Microsoft, Walmart, Apple, Tesla..."><br><br>
+        <button type="submit" class="addToButtons">Search</button>
+    </form>
+
+    <div id="companyLogo" style="visibility : hidden;">
+        <div id="companyName" style="font-size: xx-large;"></div>
+        <div><img src="" style="height: 120px; width: 120px;" id="companyImage"></div>
+        
+       <div id="AddToButtonsDiv">
+            <button class = "addToButtons" id="addToWallet">Add to my wallet</button>
+            <button class = "addToButtons" id="addToWatchList">Add to my WatchList</button>
+            <button class = "addToButtons" id="addToNews">Add to my News</button>
+        </div> 
+        <h2 style ="text-align: center;"><u>Overview</u></h2>
+
+        <div id="companyOverview"></div>
+    </div>
+</div>
+    
+<div id="personaliseParagrafo" style="font-size: large; visibility: hidden;">Personaliza a tua análise :</div>
+
+<div id="SeparadorAnalise" style ="visibility: hidden;">
+    <ul id="ulSeparadoresDeAnalise">        
+        <li id ='overviewDataButton' style = "text-decoration: overline black;">Overview Data</li>
+        <li id='fundamental'>Fundamental Data</li>
+        <li id='technicalSeparadorButton'>Technical Data</li>
+        <li id="calendarSeparadorButton">Calendar</li>
+        <li id="recentNewsSeparador">Recent News</li>
+        <li id="nextEventsSeparador">Next Events..</li>
+    </ul>
+</div>
+
+
+<div id="mainContainer" style="display : none">
+
+<div id ="overviewDataContainer" style ="visibility: hidden;">
+
+    <div id="Square1" class="Squares">
+        <select class="overviewSelectOptions" name="stats" id="stats1" selected ="-" style="left: 35%;">
+            <option>Select a statistic</option>
+            <option>Sector</option>
+            <option>PERatio</option>
+            <option>EPS</option>
+            <option>BookValue</option>
+            <option>SharesOutstanding</option>
+            <option>SharesFloat</option>
+            <option>ShortRatio</option>
+            <option>52WeekHigh</option>
+            <option>52WeekLow</option>
+            <option>FullTimeEmployees</option>
+            <option>MarketCapitalization</option>
+            <option>RevenuePerShareTTM</option>
+            <option>PriceToSalesRatioTTM</option>
+            <option>PriceToBookRatio</option>
+            <option>PercentInsiders</option>
+            <option>PercentInstitutions</option>
+        </select>
+        <div id="Stat1" class="displayStatistic"></div>
+    </div>
+
+    <div id ="Square2" class="Squares">
+        <select class="overviewSelectOptions" name="stats" id="stats2" selected ="-" style="left: 35%;">
+            <option>Select a statistic</option>
+            <option>Sector</option>
+            <option>PERatio</option>
+            <option>EPS</option>
+            <option>BookValue</option>
+            <option>SharesOutstanding</option>
+            <option>SharesFloat</option>
+            <option>ShortRatio</option>
+            <option>52WeekHigh</option>
+            <option>52WeekLow</option>
+            <option>FullTimeEmployees</option>
+            <option>MarketCapitalization</option>
+            <option>RevenuePerShareTTM</option>
+            <option>PriceToSalesRatioTTM</option>
+            <option>PriceToBookRatio</option>
+            <option>PercentInsiders</option>
+            <option>PercentInstitutions</option>
+        </select>
+        <div id="Stat2" class="displayStatistic"></div>
+    </div>
+
+    <div id ="Square3" class="Squares">
+        <select class="overviewSelectOptions" name="stats" id="stats3"  selected ="-" style="left: 35%;">
+            <option>Select a statistic</option>
+            <option>Sector</option>
+            <option>PERatio</option>
+            <option>EPS</option>
+            <option>BookValue</option>
+            <option>SharesOutstanding</option>
+            <option>SharesFloat</option>
+            <option>ShortRatio</option>
+            <option>52WeekHigh</option>
+            <option>52WeekLow</option>
+            <option>FullTimeEmployees</option>
+            <option>MarketCapitalization</option>
+            <option>RevenuePerShareTTM</option>
+            <option>PriceToSalesRatioTTM</option>
+            <option>PriceToBookRatio</option>
+            <option>PercentInsiders</option>
+            <option>PercentInstitutions</option>
+        </select>
+        <div id="Stat3" class="displayStatistic"></div>
+    </div>
+
+    <div id ="Square4" class="Squares">
+        <select class="overviewSelectOptions" name="stats" id="stats4" selected ="-" style="left: 35%;">
+            <option>Select a statistic</option>
+            <option>Sector</option>
+            <option>PERatio</option>
+            <option>EPS</option>
+            <option>BookValue</option>
+            <option>SharesOutstanding</option>
+            <option>SharesFloat</option>
+            <option>ShortRatio</option>
+            <option>52WeekHigh</option>
+            <option>52WeekLow</option>
+            <option>FullTimeEmployees</option>
+            <option>MarketCapitalization</option>
+            <option>RevenuePerShareTTM</option>
+            <option>PriceToSalesRatioTTM</option>
+            <option>PriceToBookRatio</option>
+            <option>PercentInsiders</option>
+            <option>PercentInstitutions</option>
+        </select>
+        <div id="Stat4" class="displayStatistic" ></div>
+    </div>
+
+    <div id ="Square5" class="Squares">
+            <select class="overviewSelectOptions" name="stats" id="stats5" selected ="-" style="left: 35%;">
+                <option>Select a statistic</option>
+                <option>Sector</option>
+                <option>PERatio</option>
+                <option>EPS</option>
+                <option>BookValue</option>
+                <option>SharesOutstanding</option>
+                <option>SharesFloat</option>
+                <option>ShortRatio</option>
+                <option>52WeekHigh</option>
+                <option>52WeekLow</option>
+                <option>FullTimeEmployees</option>
+                <option>MarketCapitalization</option>
+                <option>RevenuePerShareTTM</option>
+                <option>PriceToSalesRatioTTM</option>
+                <option>PriceToBookRatio</option>
+                <option>PercentInsiders</option>
+                <option>PercentInstitutions</option>
+            </select>
+            <div id="Stat5" class="displayStatistic"></div>
+    </div>
+
+    <div id ="Square6" class="Squares">
+            <select class="overviewSelectOptions" name="stats" id="stats6" selected ="-" style="left: 35%;">
+                <option>Select a statistic</option>
+                <option>Sector</option>
+                <option>PERatio</option>
+                <option>EPS</option>
+                <option>BookValue</option>
+                <option>SharesOutstanding</option>
+                <option>SharesFloat</option>
+                <option>ShortRatio</option>
+                <option>52WeekHigh</option>
+                <option>52WeekLow</option>
+                <option>FullTimeEmployees</option>
+                <option>MarketCapitalization</option>
+                <option>RevenuePerShareTTM</option>
+                <option>PriceToSalesRatioTTM</option>
+                <option>PriceToBookRatio</option>
+                <option>PercentInsiders</option>
+                <option>PercentInstitutions</option>
+            </select>
+            <div id="Stat6" class="displayStatistic"></div>
+    </div>
+</div>
+
+<div id='fundamentalDataContainer'>
+
+    <div id="incomeStatement" style="border : 4px solid black; border-radius: 5px;"><h2>Income Statement</h2><hr>
+        <p>Select which specific data you want to be displayed :</p>
+
+        <form id="incomeStatementRadio">
+            <input type="radio" id="annualReport" value="annualReports" name="incomeStatementRadioName">
+            <label for="annualReport">Last Annual Report</label>
+            <input type="radio" id="quarterlyReport" value="quarterlyReports" name="incomeStatementRadioName">
+            <label for="quarterlyReport">Last Quarterly Report</label><br>
+        </form>
+        
+        <br>
+        <div class="fundamentalSelectedValuesBox" id="IncomeStatementSelectedValue"></div>
+        <select class="fundamentalSelectOptions" id="incomeStatementOption">
+            <option>Select..</option>
+            <option>fiscalDateEnding</option>
+            <option>grossProfit</option>
+            <option>totalRevenue</option>
+            <option>costOfRevenue</option>
+            <option>operatingIncome</option>
+            <option>netIncome</option>
+            <option>ebitda</option>
+            <option>ebit</option>
+            <option>costofGoodsAndServicesSold</option>
+        </select>
+        <br><br>
+        <button class="addToButtons" type="button" id="buttonToShowISTable">Show Table</button> <button class="addToButtons" type="button" id="removeIsTable">Remove table</button>
+        <div id="incomeStatementTable" style="display: flex; justify-content: center;"></div>
+    </div>
+
+    <div id="balanceSheet" style="border : 4px solid black;"><h2>Balance Sheet</h2><hr>
+        
+        <p>Select which specific data you want to be displayed :</p>
+
+        <form id="balanceSheetRadio">
+            <input type="radio" id="BSAnnualReport" name="balanceSheetRadioName" value="annualReports">
+            <label for="balanceSheetRadio">Last Annual Report</label>
+            <input type="radio" id="BSQarterlyReport" name="balanceSheetRadioName" value="quarterlyReports">
+            <label for="balanceSheetRadio">Last Quarterly Report</label><br>
+        </form>
+        
+        <br>
+        <div class="fundamentalSelectedValuesBox" id="balanceSheetSelectedValue"></div>
+        <select class="fundamentalSelectOptions" id="balanceSheetOptions">
+            <option>Select..</option>
+            <option>fiscalDateEnding</option>
+            <option>totalAssets</option>
+            <option>totalCurrentAssets</option>
+            <option>cashAndCashEquivalentsAtCarryingValue</option>
+            <option>cashAndShortTermInvestments</option>
+            <option>inventory</option>
+            <option>currentNetReceivables</option>
+            <option>currentDebt</option>
+            <option>shortTermDebt</option>
+            <option>intangibleAssets</option>
+            <option>intangibleAssetsExcludingGoodwill</option>
+            <option>goodwill</option>
+        </select>
+        <br><br>
+        <button class="addToButtons" type="button" id="buttonToShowBSTable">Show Table</button><button class="addToButtons" type="button" id="removeBsTable">Remove table</button>
+        <div id="balanceSheetTable" style="display: flex; justify-content: center;"></div>
+    </div>
+
+    <div id="cashFlow" style="border : 4px solid black";><h2>Cash Flow</h2><hr>
+        
+        <p>Select which specific data you want to be displayed :</p>
+
+        <form id="cashFlowRadio">
+            <input type="radio" id="cfAnnualReport" name="cashFlowRadioName" value="annualReports">
+            <label for="cashFlowRadioName">Last Annual Report</label>
+            <input type="radio" id="cfQuarterlyReport" name="cashFlowRadioName" value="quarterlyReports">
+            <label for="cashFlowRadioName">Last Quarterly Report</label><br>
+        </form>
+
+        <br>
+        <div class="fundamentalSelectedValuesBox" id="cashFlowSelectedValue"></div>
+        <select class="fundamentalSelectOptions" id="cashFlowOptions">
+            <option>Select..</option>
+            <option>fiscalDateEnding</option>
+            <option>operatingCashflow</option>
+            <option>paymentsForOperatingActivities</option>
+            <option>proceedsFromOperatingActivities</option>
+            <option>changeInOperatingLiabilities</option>
+            <option>changeInOperatingAssets</option>
+            <option>depreciationDepletionAndAmortization</option>
+            <option>changeInReceivables</option>
+            <option>changeInInventory</option>
+            <option>profitLoss</option>
+            <option>cashflowFromInvestment</option>
+            <option>cashflowFromFinancing</option>
+            <option>netIncome</option>
+        </select>
+        <br><br>
+        <button class="addToButtons" type="button" id="buttonToShowCFTable">Show Table</button> <button class="addToButtons" type="button" id="removeCfTable">Remove table</button>
+        <div id="cashFlowTable" style="display: flex; justify-content: center;"></div>
+    </div>
+
+</div>
+
+<div id ="technicalDataContainer">
+    <div id="chartTimePeriodButtons">
+        <span class ="addToButtons">1 Day</span> <span class ="addToButtons">5 Day</span><span class ="addToButtons">1 Month</span><span class ="addToButtons">3 Month</span><span class ="addToButtons">1 Year</span><span class ="addToButtons">5 Year</span>
+    </div>
+    <br>
+    <canvas id="myChart">
+       
+    </canvas>
+
+</div>
+
+<div id="calendarContainer">
+    <div id='calendar'></div>
+</div>
+
+<div id="recentNewsContainer">
+    
+    <div class="pressReleasesContainer" id ="pressReleasesContainer">
+
+        <div id=pressReleaseTitle class="pressReleasesTitle">If you're reading this your new hasn't loaded correctly</div>
+
+        <div id="publishedDate" class="publishDate">Published Date</div>
+
+        <div id='pressReleaseContentContainer'>
+            <div id="pressReleaseContent" class="pressReleaseInfo"></div>
+
+            <br>
+            <div id="pressReleaseButtonContainer" style = "margin : 5px;">
+                <button id="pressReleaseContentButton" type="button" class="addToButtons">Read more...</button>
+                <button id="closePressReleaseContent" class="addToButtons">Close</button>
+            </div>
+            <br>
+
+        </div>
+
+    </div>
+
+    <div class="pressReleasesContainer" id ="pressReleasesContainer2">
+
+        <div id="pressReleaseTitle2" class="pressReleasesTitle">If you're reading this your new hasn't loaded yet..</div>
+       
+        <div id="publishedDate2" class="publishDate">Published Date</div>
+
+        <div id='pressReleaseContentContainer2'>
+            <div id="pressReleaseContent2" class="pressReleaseInfo"></div>
+
+            <br>
+            <div id="pressReleaseButtonContainer2" style = "margin : 5px;"></div>
+            <button id="readMoreButton" type="button" class="addToButtons">Read more...</button>
+            <button id="closePressReleaseContent2" class="addToButtons">Close</button>
+            </div>
+            <br>
+    </div>
+
+    <div class="pressReleasesContainer" id ="pressReleasesContainer3">
+
+        <div id="pressReleaseTitle3" class="pressReleasesTitle">If you're reading this your new hasn't loaded yet..</div>
+
+        <div id="publishedDate3" class="publishDate">Published Date</div>
+
+        <div id='pressReleaseContentContainer3'>
+
+            <div id="pressReleaseContent3" class="pressReleaseInfo"></div>
+            
+            <br>
+            <div id="pressReleaseButtonContainer3" style = "margin : 5px;">
+                <button id="readMoreButton3" type="button" class="addToButtons">Read more...</button>
+                <button id="closePressReleaseContent3" class="addToButtons">Close</button>
+            </div>
+            <br>
+
+        </div>
+
+    </div>
+
+    <div class="pressReleasesContainer" id ="pressReleasesContainer4">
+
+        <div id="pressReleaseTitle_4" class="pressReleasesTitle">If you're reading this your new hasn't loaded yet..</div>
+
+        <div id="publishedDate_4" class="publishDate">Published Date</div>
+       
+        <div id='pressReleaseContentContainer_4'>
+
+            <div id="pressReleaseContent_4" class="pressReleaseInfo"></div>
+            
+            <br>
+            <div id="pressReleaseButtonContainer4" style = "margin : 5px;"></div>
+            <button id="readMoreButton4" type="button" class="addToButtons">Read more...</button>
+            <button id="closePressReleaseContent4" class="addToButtons">Close</button>
+            </div>
+            <br>
+    </div>
+
+    <div class="pressReleasesContainer" id ="pressReleasesContainer5">
+        <div id="pressReleaseTitle_5" class="pressReleasesTitle">If you're reading this your new hasn't loaded yet..</div>
+
+        <div id="publishedDate_5" class="publishDate">Published Date</div>
+
+        <div id='pressReleaseContentContainer_5'>
+
+            <div id="pressReleaseContent_5" class="pressReleaseInfo"></div>
+            
+            <br>
+            <div id="pressReleaseButtonContainer5" style = "margin : 5px;"></div>
+            <button id="readMoreButton5" type="button" class="addToButtons">Read more...</button>
+            <button id="closePressReleaseContent5" class="addToButtons">Close</button>
+            </div>
+            <br>
+    </div>
+
+</div>
+
+<div id="nextEventContainer"></div>
+
+</div>
+
+<div id = "footer" style=" text-align: center; background-color: black; position: fixed; bottom: 0px; width: 100%; margin-top:5px; z-index: 999;">
+    <a href="https://clearbit.com" style="color: white;">Logos by Clearbit. Project By Simão Bonvalot</a>
+</div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.js"></script>
+<script type="module" src="./modules/test.js"></script>
+<script type ="module" src="HomePage.js"></script>
+<script type="module" src="./modules/CSVtoJSON.js"></script>

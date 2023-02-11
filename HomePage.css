@@ -1,0 +1,501 @@
+body
+{
+    margin: 0%  ;
+}
+
+.cabecalho
+{
+    display: block;
+    position: fixed;
+    text-align: center;
+    background-color: rgba(17, 141, 69, 0.9);
+    text-align : center;
+    width: 100%;
+    z-index: 999;
+
+}
+
+#titulo
+{
+    margin : 0;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    color: #000000;
+    font-weight: 600;
+    text-decoration: underline solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: capitalize;
+}
+
+#userProfile
+{ 
+    visibility: hidden;
+    opacity : 0;
+    background-color: gray;
+    margin: 0%;
+    position: fixed;
+    width : 30%;
+    height: 100%;
+    border : 1px solid black;
+    z-index: 999;
+    top: 0%;
+    transition: 1250ms;
+}
+
+#userProfile h1
+{
+    text-align: center;
+}
+
+#userImage
+{
+    height: 228px;
+    width: 228px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profileList
+{
+    display : block;
+    border: none;
+    border-bottom: 2px dotted black;
+    text-align: center;
+}
+
+#ulcabecalho
+{
+    display: block;
+    padding : 0px;
+}
+
+#ulcabecalho li
+{
+    padding : 5px;
+    display: inline-block;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li:hover
+{
+    background-color: white;
+    cursor: pointer;
+    border-left : 2px solid black;
+}
+
+a
+{
+
+    color: inherit;
+    text-decoration: none; 
+      
+}
+
+form
+{
+    margin : 15px;
+    text-align : center;
+}
+
+#searchbar
+{
+    padding: 5px;
+    width: 25%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#companyLogo
+{
+    text-align: center;
+    padding: 0px;
+}
+
+#companyImage
+{
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+
+}
+
+#AddToButtonsDiv
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.addToButtons
+{
+    background-color: rgb(17, 141, 69, 0.8);
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid black;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#companyOverview
+{
+    text-align: center;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#mainContainer
+{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 90%;
+}
+
+#overviewDataContainer
+{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#overviewDataContainer > * {
+    vertical-align: middle;
+}
+
+
+
+#personaliseParagrafo
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 50%;
+    padding: 20px;
+
+}
+
+#SeparadorAnalise
+{
+    position: relative;
+    display: flex;
+    padding: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+    margin-top: 10px;
+}
+
+#SeparadorAnalise ul
+{
+    padding: 2px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#SeparadorAnalise li
+{
+    padding : 5px;
+    display: inline-block;
+    font-weight: bolder;
+}
+
+#SeparadorAnalise ul li:hover
+{
+    background-color: rgb(17, 141, 69, 0.7);
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+}
+
+.Squares
+{
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+    width : 350px;
+    Height : 350px;
+    border : 12px solid red;
+    align-items: center;
+    cursor: grab;
+    padding: 5px;
+    border-radius: 5%;
+}
+
+.overviewSelectOptions
+{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.Squares:hover
+{
+    transform: scale(1.1);
+}
+
+#Square1
+{
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+    width : 350px;
+    Height : 350px;
+    border : 12px solid green;
+    align-items: center;
+    cursor: grab;
+    padding: 5px;
+    border-radius: 5%;
+}
+
+#Square2
+{
+    display : inline-block;
+    position: relative;
+    margin: 20px;
+    width : 350px;
+    Height : 350px;
+    border : 12px solid orange;
+    align-items: center;
+    cursor: grab;
+    padding: 5px;
+    border-radius: 5%;
+}
+
+#Square3
+{
+    display : inline-block;
+    position: relative;
+    margin: 20px;
+    width : 350px;
+    Height : 350px;
+    border : 12px solid black;
+    align-items: center;
+    cursor: grab;
+    padding: 5px;
+    border-radius: 5%;
+}
+
+#Square4
+{
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+    width : 350px;
+    Height : 350px;
+    border : 12px solid rgb(136, 57, 4);
+    align-items: center;
+    cursor: grab;
+    padding: 5px;
+    border-radius: 5%;
+}
+
+#Square5
+{
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+    width : 350px;
+    Height : 350px;
+    border : 12px solid rgb(189, 49, 72);
+    align-items: center;
+    cursor: grab;
+    padding: 5px;
+    border-radius: 5%;
+}
+
+#Square6
+{
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+    width : 350px;
+    Height : 350px;
+    border : 12px solid rgb(70, 5, 70);
+    align-items: center;
+    cursor: grab;
+    padding: 5px;
+    border-radius: 5%;
+}
+
+#AddSquare
+{
+    display: flex;
+    align-items: center;
+    border: hidden;
+}
+
+.AddSymbol
+{
+    position: relative;
+    width : 155px;
+    height : 90px;
+    top : 35%;
+    left: 29%;
+    cursor: pointer;
+}
+
+.displayStatistic
+{
+    border : 2px solid black;
+    width: 345px;
+    height: 345px;
+    margin : 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacaoFundamental
+{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    border : 2px solid black;
+    text-align: center;
+}
+
+#InformationMessage {
+    display: none;
+}
+
+.informacaoFundamental:hover
+{
+    cursor: pointer;
+    background-color: rgb(17, 141, 69, 0.7) ;
+    height : 400px;
+}
+
+#fundamentalDataContainer
+{
+    display: none;
+    width: 85%;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fundamentalDataContainer div
+{
+    margin-top : 10px;
+    padding: 15px;
+}
+
+#technicalDataContainer
+{
+    display : none;
+}
+
+#calendarContainer
+{
+    display: none;
+    width: 85%;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#recentNewsContainer
+{
+    display : none;
+}
+
+.fundamentalSelectOptions
+{
+    background-color:rgb(17, 141, 69, 0.7) ;
+    font-weight: 650;
+    color: black;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+hr
+{
+    border: 1px solid black;
+}
+
+.fundamentalSelectedValuesBox
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black; 
+    max-width: 75%; 
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 30px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    height: 100px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.pressReleasesContainer
+{
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    margin : 5px;
+    margin-top : 15px;
+}
+
+.pressReleasesTitle
+{
+    background-color: rgb(17, 141, 69, 0.8);
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 2px solid black;
+    margin : 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.publishDate
+{
+    border : 2px solid black ; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding : 5px;
+    text-decoration: underline;
+    margin : 5px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: rgba(221, 211, 211, 0.993);
+}
+
+.pressReleaseInfo
+{
+    border : 2px solid black; 
+    margin : 5px; 
+    padding : 10px;
+    background-color: rgb(238, 210, 173);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
